@@ -1,10 +1,12 @@
 import discord
 import os
 import json
+from discord import colour
 from discord.ext import commands
 from unscrambler import unscramble
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='>')
+bot.remove_command('help')
 
 @bot.event
 async def on_ready():
@@ -17,11 +19,22 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send(f'Pong! {round(bot.latency * 1000)}ms')
+
+@bot.command()
+async def help(ctx):
+    help_embed = discord.Embed(colour = discord.Colour.blue())
+
+    help_embed.set_author(name = 'Commands')
+    help_embed.add_field(name = 'ping', value = 'Returns the bot\'s latency', inline = False)
+    help_embed.add_field(name = 'flag', value = '!flag <2 Letter Country Code>', inline = False)
+    help_embed.add_field(name = 'unscramble', value = '!unscramble <scrambled word>', inline = False)
+
+    await ctx.send(embed = help_embed)
 
 @bot.command()
 async def flag(ctx, code):
-    with open('LC Flag Solver/flags.json') as f:
+    with open('./flags.json') as f:
         f = json.load(f)
     
     try:
