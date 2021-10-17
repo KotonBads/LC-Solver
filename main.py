@@ -5,7 +5,7 @@ from discord import colour
 from discord.ext import commands
 from unscrambler import unscramble
 
-bot = commands.Bot(command_prefix='>')
+bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
 @bot.event
