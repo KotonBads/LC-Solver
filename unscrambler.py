@@ -3,7 +3,7 @@ def RemoveFromList(thelist, val):
 
 def GetDic():
     try:
-        with open("LC Solver/DL.txt", "r") as dicopen:
+        with open("./DL.txt", "r") as dicopen:
             dicraw = dicopen.read()
         diclist = dicraw.split("\n")
         diclist = RemoveFromList(diclist, '')
