@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 __pycache__/*
 test.py
 *.code-workspace
+=======
+__pycache__/*
+>>>>>>> 5f86ba3 (added a gitignore)
