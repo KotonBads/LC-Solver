@@ -4,7 +4,7 @@ import json
 from discord.ext import commands
 from unscrambler import unscramble
 
-bot = commands.Bot(command_prefix='>')
+bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
