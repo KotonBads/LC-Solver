@@ -1,6 +1,3 @@
-from os import get_inheritable
-
-
 def RemoveFromList(thelist, val):
     return [value for value in thelist if value != val]
 
@@ -49,6 +46,9 @@ def Ints2Dic(dic):
     return d
 
 def unscramble(word):
+    """
+    Original Code from https://github.com/tinmarr/Word-Unscrambler
+    """
     return Ints2Dic(GetDic()).get(Vect2Int(Word2Vect(word)))
 
 # print(unscramble('lleh'))
