@@ -1,7 +1,6 @@
 import discord
 import os
 import json
-from discord import colour
 from discord.ext import commands
 from unscrambler import unscramble
 
