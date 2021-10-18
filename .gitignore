@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 __pycache__/*
+<<<<<<< HEAD
 test.py
 *.code-workspace
 =======
@@ -10,3 +11,7 @@ __pycache__/*
 __pycache__/*
 **.code-workspace
 >>>>>>> 4120c8f (add .code-workspace to git ignore)
+=======
+**.code-workspace
+test.py
+>>>>>>> 0d62a46 (added test.py to gitignore)
