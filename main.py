@@ -29,6 +29,7 @@ async def help(ctx):
     help_embed.add_field(name = 'ping', value = 'Returns the bot\'s latency', inline = False)
     help_embed.add_field(name = 'flag', value = '!flag <2 Letter Country Code>', inline = False)
     help_embed.add_field(name = 'unscramble', value = '!unscramble <scrambled word>', inline = False)
+    help_embed.add_field(name = 'fill_in_the_gaps [fitg, fill]', value = '!fitg <word with missing letters (_)>', inline = False)
 
     await ctx.send(embed = help_embed)
 
