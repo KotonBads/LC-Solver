@@ -12,5 +12,3 @@ def solve(_blanks):
         if i.startswith(blanks[0]) and i.endswith(blanks[len(blanks) - 1])
     ]
     return list(filter(None, ans))
-
-print(solve('fl_m__o'))
