@@ -3,6 +3,7 @@ import os
 import json
 from discord.ext import commands
 from unscrambler import unscramble
+from build_battle import solve
 
 bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
@@ -44,5 +45,9 @@ async def flag(ctx, code):
 @bot.command(aliases = ['unscramble'])
 async def unscramble_(ctx, word):
     await ctx.send(unscramble(word))
+
+@bot.command(aliases = ['fill', 'fitg'])
+async def fill_in_the_gaps(ctx, gapped_word):
+    await ctx.send(f"{solve(f'{gapped_word}')}")
 
 bot.run(os.environ['LC_SOLVER_TOKEN'])
