@@ -6,8 +6,11 @@ def parse():
 
 def solve(_blanks):
     blanks = _blanks.split('_')
-    for i in parse():
-        if i.startswith(blanks[0]) and i.endswith(blanks[len(blanks) - 1]):
-            print(i)
+    ans = [
+        i if len(_blanks) == len(i) else ''
+        for i in parse()
+        if i.startswith(blanks[0]) and i.endswith(blanks[len(blanks) - 1])
+    ]
+    return list(filter(None, ans))
 
-solve('cal__d_r')
+print(solve('fl_m__o'))
