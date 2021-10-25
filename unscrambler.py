@@ -49,7 +49,7 @@ def unscramble(word):
     """
     Original Code from https://github.com/tinmarr/Word-Unscrambler
     """
-    return Ints2Dic(GetDic()).get(Vect2Int(Word2Vect(word)))
+    return Ints2Dic(GetDic()).get(Vect2Int(Word2Vect(word.lower())))
 
 # print(unscramble('lleh'))
 # dic = GetDic()

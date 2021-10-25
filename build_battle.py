@@ -5,7 +5,7 @@ def parse():
     return f[0].split(',')
 
 def solve(_blanks):
-    blanks = _blanks.split('_')
+    blanks = _blanks.lower().split('_')
     ans = [
         i if len(_blanks) == len(i) else ''
         for i in parse()
